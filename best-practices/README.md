@@ -21,12 +21,15 @@ E.g. Animals, schools and employees are resources and delete, add, update are th
 
 ### CONVENTIONS
 The URL should only contain resources(nouns) not actions or verbs.
+
 This is where the HTTP methods (GET, POST, DELETE, PUT), also called as verbs, play the role.
 
 ### HTTP METHODS
 #### GET
 Method requests data from the resource and should not produce any side effect.
+
 E.g /companies/2/employees returns list of all employees from company 2.
+
 /companies should get the list of all companies
 
 /companies/7 should get the detail of company 7
@@ -59,13 +62,10 @@ E.g /companies/2/employees/mike/ will request the server to delete mike resource
 /companies/2/employees/87 should delete employee 87, which belongs to company 2
 
 ### RESPONSES:
-2xx (Success category)
-3xx (Redirection Category)
-4xx (Client Error Category)
-5xx (Server Error Category)
-
-### FIELD NAME CASING CONVENTION:
-If the request body or response type is JSON then please follow snake_case to maintain the consistency.
+- 2xx (Success category)
+- 3xx (Redirection Category)
+- 4xx (Client Error Category)
+- 5xx (Server Error Category)
 
 ### OTHERS
 #### Sorting:
@@ -89,5 +89,7 @@ Eg. GET /companies?page=23 means get the list of companies on 23rd page.
 ### VERSIONING
 Upgrading the APIs with some breaking change would also lead to breaking the existing products or services using your APIs.
 
-"http://api.yourservice.com/v1/companies/7/employees" is a good example, which has the version number of the API in the path.
-If there is any major breaking update, we can name the new set of APIs as v2 or v1.x.x
+http://api.yourservice.com/v1/companies/7/employees is a good example, which has the version number of the API in the path. If there is any major breaking update, we can name the new set of APIs as v2 or v1.x.x
+
+### FIELD NAME CASING CONVENTION:
+If the request body or response type is JSON then please follow snake_case to maintain the consistency.
