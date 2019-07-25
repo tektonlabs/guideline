@@ -10,21 +10,21 @@ Extracted from Thoughbot.
 - Exceptions should be exceptional.
 - Keep the code simple.
 
-## REST APIs:
+## REST APIs
 Extracted from the work on some blogs.
 
-### TERMINOLOGIES
+### Terminologies
 - **Resource** is an object or representation of something, which has some associated data with it and there can be set of methods to operate on it.
 E.g. Animals, schools and employees are resources and delete, add, update are the operations to be performed on these resources.
 - **Collections** are set of resources, e.g Companies is the collection of Company resource.
 - **URL (Uniform Resource Locator)** is a path through which a resource can be located and some actions can be performed on it.
 
-### CONVENTIONS
+### Conventions
 The URL should only contain resources(nouns) not actions or verbs.
 
 This is where the HTTP methods (GET, POST, DELETE, PUT), also called as verbs, play the role.
 
-### HTTP METHODS
+### HTTP Methods
 #### GET
 Method requests data from the resource and should not produce any side effect.
 
@@ -61,35 +61,35 @@ E.g /companies/2/employees/mike/ will request the server to delete mike resource
 
 /companies/2/employees/87 should delete employee 87, which belongs to company 2
 
-### RESPONSES:
+### Responses
 - 2xx (Success category)
 - 3xx (Redirection Category)
 - 4xx (Client Error Category)
 - 5xx (Server Error Category)
 
-### OTHERS
-#### Sorting:
+### Other
+#### Sorting
 In case, the client wants to get the sorted list of companies, the GET /companies endpoint should accept multiple sort params in the query.
 
 E.g GET /companies?sort=rank_asc would sort the companies by its rank in ascending order.
 
-#### Filtering:
+#### Filtering
 For filtering the dataset, we can pass various options through query params.
 
 E.g GET /companies?category=banking&location=india would filter the companies list data with the company category of Banking and where the location is India.
 
-#### Searching:
+#### Searching
 When searching the company name in companies list the API endpoint should be GET /companies?search=Digital Mckinsey
 
-#### Pagination:
+#### Pagination
 When the dataset is too large, we divide the data set into smaller chunks, which helps in improving the performance and is easier to handle the response.
 
 Eg. GET /companies?page=23 means get the list of companies on 23rd page.
 
-### VERSIONING
+### Versioning
 Upgrading the APIs with some breaking change would also lead to breaking the existing products or services using your APIs.
 
 http://api.yourservice.com/v1/companies/7/employees is a good example, which has the version number of the API in the path. If there is any major breaking update, we can name the new set of APIs as v2 or v1.x.x
 
-### FIELD NAME CASING CONVENTION:
+### Field name casing convention
 If the request body or response type is JSON then please follow snake_case to maintain the consistency.
