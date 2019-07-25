@@ -1,7 +1,7 @@
 # Guideline
 Our guide for getting things done, programming well, and programming in style.
 
-- Best Practices
+- [Best Practices](./best-practices)
 - Code Review (TBD)
 - How to (TBD)
 
