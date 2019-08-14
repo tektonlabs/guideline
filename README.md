@@ -1,10 +1,11 @@
 # Guideline
+
 Our guide for getting things done, programming well, and programming in style.
 
-- [Best Practices](./best-practices)
+- [Best Practices](./best_practices)
+- [Web Team Values](./web_team)
 - Code Review (TBD)
 - How to (TBD)
-
 
 ## High level guidelines:
 
